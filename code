@@ -1,0 +1,14 @@
+class Solution {
+public:
+    int minFlipsMonoIncr(string s) {
+      int zto=0 , oc=0;
+      int i=0 ;
+      while(s.length() && s[i]=='0') i++;  
+      for(;i<s.length() ;i++){
+          if(s[i]=='0')zto++;
+          else oc++;
+          if(zto>oc) zto=oc;
+      }
+      return zto;
+    }
+};
